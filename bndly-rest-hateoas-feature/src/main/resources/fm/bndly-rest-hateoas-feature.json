@@ -1,0 +1,104 @@
+{
+  "bundles": [
+    {
+      "id": "org.codehaus.jettison:jettison:jar:1.3.1",
+      "start-level": "2"
+    },
+    {
+      "id": "org.bndly.common:org.bndly.common.osgi:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common.data:org.bndly.common.data.data-api:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.data:org.bndly.common.data.io:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common:org.bndly.common.lang:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common:org.bndly.common.reflection:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common.crypto:org.bndly.common.crypto.crypto-api:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common.crypto:org.bndly.common.crypto.crypto-impl:jar:${bndly.common.version}",
+      "start-level": "13"
+    },
+    {
+      "id": "org.bndly.common:org.bndly.common.converter:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.servlet-base:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.api:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.data-resource:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.data-resource-beans:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.annotations:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.link-injector:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.api-descriptor:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.annotation-api:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.annotation-impl:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.beans:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.graph:org.bndly.common.graph.graph-api:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.graph:org.bndly.common.graph.graph-impl:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.response-postprocessor:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.jaxb-resource-renderer:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.security:jar:${bndly.common.version}",
+      "start-level": "20"
+    },
+    {
+      "id": "org.bndly.common.rest:org.bndly.common.rest.cycle-breaker:jar:${bndly.common.version}",
+      "start-level": "20"
+    }
+  ]
+}

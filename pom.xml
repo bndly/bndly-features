@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.bndly.features</groupId>
+    <artifactId>org.bndly.features.parent</artifactId>
+    <version>${revision}${changelist}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <slingfeature-maven-plugin.version>1.1.2</slingfeature-maven-plugin.version>
+        <bndly.common.version>${revision}${changelist}</bndly.common.version>
+        <cybercon.common.version>4.0.1</cybercon.common.version>
+    </properties>
+
+    <modules>
+        <module>bndly-rest-hateoas-feature</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.0.0</version>
+                <configuration>
+                    <licenseName>apache_v2</licenseName>
+                    <inceptionYear>2013</inceptionYear>
+                    <organizationName>Cybercon GmbH</organizationName>
+                    <excludes>**/*.json,**/*.css</excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.bndly.features</groupId>
+    <artifactId>org.bndly.features.parent</artifactId>
+    <version>${revision}${changelist}</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>org.bndly.features.rest-hateoas-feature</artifactId>
+  <packaging>slingosgifeature</packaging>
+
+  <properties>
+    <jaxb.version>2.2.1</jaxb.version>
+    <jetty.version>9.4.15.v20190215</jetty.version>
+    <org.apache.sling.feature.extension.content.version>1.0.6</org.apache.sling.feature.extension.content.version>
+    <org.apache.sling.feature.launcher.version>1.1.2</org.apache.sling.feature.launcher.version>
+    <org.apache.sling.feature.model.starter.version>12-SNAPSHOT</org.apache.sling.feature.model.starter.version>
+    <sling.home>target/launcher</sling.home>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.feature.model.starter</artifactId>
+      <version>${org.apache.sling.feature.model.starter.version}</version>
+      <type>slingosgifeature</type>
+      <scope>runtime</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>copy-frm-resource</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <outputDirectory>target</outputDirectory>
+          <resources>
+            <resource>
+              <directory>src/main/resources</directory>
+            </resource>
+          </resources>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>slingfeature-maven-plugin</artifactId>
+        <version>${slingfeature-maven-plugin.version}</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <id>aggregate-base-feature</id>
+            <phase>generate-test-sources</phase>
+            <goals>
+              <goal>aggregate-features</goal>
+            </goals>
+            <configuration>
+              <aggregates>
+                <aggregate>
+                  <classifier>web-assembly</classifier>
+                  <filesInclude>**/*.json</filesInclude>
+                  <configurationOverrides>*=USE_LATEST</configurationOverrides>
+                  <artifactsOverrides>
+                    <artifactsOverride>org.slf4j:slf4j-api:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.slf4j:jcl-over-slf4j:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.slf4j:log4j-over-slf4j:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.sling:org.apache.sling.commons.logservice:bundle:LATEST</artifactsOverride>
+                    <artifactsOverride>commons-fileupload:commons-fileupload:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>commons-codec:commons-codec:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.commons:commons-lang3:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.commons:commons-collections4:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.osgi:org.osgi.util.promise:jar:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.felix:org.apache.felix.configadmin:bundle:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.felix:org.apache.felix.http.jetty:bundle:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.felix:org.apache.felix.webconsole:bundle:LATEST</artifactsOverride>
+                    <artifactsOverride>org.apache.felix:org.apache.felix.webconsole.plugins.memoryusage:bundle:LATEST</artifactsOverride>
+                  </artifactsOverrides>
+                </aggregate>
+              </aggregates>
+              <featuresExcludes>
+
+              </featuresExcludes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>attach-base-feature</id>
+            <phase>process-test-sources</phase>
+            <goals>
+              <goal>attach-features</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <features>target/fm</features>
+          <generatedFeatures>target/fm</generatedFeatures>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+</project>
