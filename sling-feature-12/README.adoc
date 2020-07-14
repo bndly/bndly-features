@@ -1,0 +1,6 @@
+= sling-feature-12
+
+This is a temporary solution to provide a sling-feature-model slingosgifeature for bndly as sling12 is not released yet.
+
+Probably this will be replaced with the official slingosgifeature of sling starter:
+

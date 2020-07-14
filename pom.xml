@@ -41,6 +41,7 @@
 
     <modules>
         <module>bndly-rest-hateoas-feature</module>
+        <module>sling-feature-12</module>
     </modules>
 
     <build>
