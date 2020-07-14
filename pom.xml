@@ -13,11 +13,44 @@
         <cybercon.common.version>4.0.1</cybercon.common.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>packagecloud-bndly</id>
+            <url>packagecloud+https://packagecloud.io/bndly/bndly-features</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>packagecloud-bndly</id>
+            <url>packagecloud+https://packagecloud.io/bndly/bndly-features</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>bndly-bndly-commons</id>
+            <url>https://packagecloud.io/bndly/bndly-commons/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <modules>
         <module>bndly-rest-hateoas-feature</module>
     </modules>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>io.packagecloud.maven.wagon</groupId>
+                <artifactId>maven-packagecloud-wagon</artifactId>
+                <version>0.0.6</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
