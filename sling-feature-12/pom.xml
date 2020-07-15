@@ -14,18 +14,16 @@
     <version>12-SNAPSHOT</version>
     <packaging>slingosgifeature</packaging>
 
-    <distributionManagement>
-        <repository>
-            <id>packagecloud-bndly</id>
-            <url>packagecloud+https://packagecloud.io/bndly/bndly-features</url>
-            <layout>default</layout>
-        </repository>
-        <snapshotRepository>
-            <id>packagecloud-bndly</id>
-            <url>packagecloud+https://packagecloud.io/bndly/bndly-features</url>
-            <layout>default</layout>
-        </snapshotRepository>
-    </distributionManagement>
+      <distributionManagement>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
     <properties>
         <org.apache.sling.feature.extension.content.version>1.0.6</org.apache.sling.feature.extension.content.version>
