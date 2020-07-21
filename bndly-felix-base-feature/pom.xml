@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bndly-felix-base-feature</artifactId>
+    <artifactId>org.bndly.features.bndly-felix-base-feature</artifactId>
     <name>Bndly felix base feature</name>
 
     <packaging>slingosgifeature</packaging>
