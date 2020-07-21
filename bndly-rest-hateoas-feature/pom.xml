@@ -10,9 +10,10 @@
   </parent>
 
   <artifactId>org.bndly.features.rest-hateoas-feature</artifactId>
+  <name>Bndly REST HATEOAS feature</name>
   <packaging>slingosgifeature</packaging>
 
-    <distributionManagement>
+  <distributionManagement>
     <repository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>

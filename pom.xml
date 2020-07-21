@@ -6,6 +6,7 @@
     <artifactId>org.bndly.features.parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>Bndly features parent</name>
 
     <description>Feature bundles as slingosgifeaures providing different combinable functionalities.</description>
 
