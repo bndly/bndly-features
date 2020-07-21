@@ -4,7 +4,7 @@
 
     <groupId>org.bndly.features</groupId>
     <artifactId>org.bndly.features.parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>${revision}${changelist}</version>
     <packaging>pom</packaging>
     <name>Bndly features parent</name>
 

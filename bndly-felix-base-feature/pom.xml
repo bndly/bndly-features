@@ -4,7 +4,7 @@
     <parent>
         <artifactId>org.bndly.features.parent</artifactId>
         <groupId>org.bndly.features</groupId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>${revision}${changelist}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
