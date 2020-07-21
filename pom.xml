@@ -4,7 +4,7 @@
 
     <groupId>org.bndly.features</groupId>
     <artifactId>org.bndly.features.parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>Feature bundles as slingosgifeaures providing different combinable functionalities.</description>
@@ -77,7 +77,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:bndly/bndly-features.git</connection>
-        <tag>org.bndly.features.parent-1.0.0</tag>
+        <tag>v1.0.0</tag>
         <url>https://github.com/bndly/bndly-features.git</url>
     </scm>
 
