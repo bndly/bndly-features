@@ -1,0 +1,48 @@
+{
+  "bundles": [
+    {
+      "id": "org.apache.felix:org.apache.felix.metatype:jar:1.2.2",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.eventadmin:jar:1.5.0",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.http.api:jar:3.0.0",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.http.bridge:jar:4.0.8",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.log:jar:1.2.0",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.scr:jar:2.1.14",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.webconsole:jar:all:4.3.12",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.webconsole.plugins.ds:jar:2.1.0",
+      "startlevel": "0"
+    },
+    {
+      "id": "org.apache.felix:org.apache.felix.configadmin:jar:1.9.16",
+      "startlevel": "4"
+    },
+    {
+      "id":"org.apache.felix:org.apache.felix.http.servlet-api:1.1.2",
+      "start-order":"5"
+    },
+    {
+      "id":"org.apache.felix:org.apache.felix.http.jetty:4.0.8",
+      "start-order":"5"
+    }
+  ]
+}

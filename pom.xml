@@ -7,10 +7,38 @@
     <version>${revision}${changelist}</version>
     <packaging>pom</packaging>
 
+    <description>Feature bundles as slingosgifeaures providing different combinable functionalities.</description>
+
+    <url>https://www.bndly.org</url>
+
+    <organization>
+        <name>Cybercon GmbH</name>
+        <url>http://www.cybercon.de</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>bndly</name>
+            <email>bndly@cybercon.de</email>
+            <organization>bndly.org</organization>
+            <organizationUrl>https://www.bndly.org</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
-        <slingfeature-maven-plugin.version>1.1.2</slingfeature-maven-plugin.version>
-        <bndly.common.version>${revision}${changelist}</bndly.common.version>
-        <cybercon.common.version>4.0.1</cybercon.common.version>
+        <org.apache.sling.feature.extension.content.version>1.0.6</org.apache.sling.feature.extension.content.version>
+        <org.apache.sling.feature.launcher.version>1.1.4</org.apache.sling.feature.launcher.version>
+        <slingfeature-maven-plugin.version>1.3.8</slingfeature-maven-plugin.version>
+        <sling.home>target/launcher</sling.home>
+        <bndly.common.version>1.0.0</bndly.common.version>
     </properties>
 
     <repositories>
@@ -47,8 +75,15 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <scm>
+        <connection>scm:git:git@github.com:bndly/bndly-features.git</connection>
+        <tag>v1.0.0</tag>
+        <url>https://github.com/bndly/bndly-features.git</url>
+    </scm>
+
     <modules>
         <module>bndly-rest-hateoas-feature</module>
+        <module>bndly-felix-base-feature</module>
     </modules>
 
     <build>
@@ -150,6 +185,47 @@
                     </plugin>
                 </plugins>
 
+            </build>
+        </profile>
+        <profile>
+            <id>launch</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>slingfeature-maven-plugin</artifactId>
+                        <version>${slingfeature-maven-plugin.version}</version>
+                        <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>launch-it</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>launch-features</goal>
+                                </goals>
+                                <configuration>
+                                    <homeDirectory>${sling.home}</homeDirectory>
+                                    <cacheDirectory>${sling.home}/repository</cacheDirectory>
+                                    <selection>
+                                        <includeClassifier>web-assembly</includeClassifier>
+                                    </selection>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.feature.extension.content</artifactId>
+                                <version>${org.apache.sling.feature.extension.content.version}</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.apache.sling</groupId>
+                                <artifactId>org.apache.sling.feature.launcher</artifactId>
+                                <version>${org.apache.sling.feature.launcher.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
     </profiles>

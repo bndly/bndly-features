@@ -1,0 +1,9 @@
+= Bndly features bndly-felix-base-feature
+
+This is a lightweight feature of Apache Felix including webconsole.
+
+You can launch it with
+ mvn install -Plaunch
+and point your webbrowser on http://loclhost:8080/system/console (admin/admin) to see it working.
+
+As you can't do much with a bare Felix other than deploy your own bundles to see them working the main reason for this feature is inclusion in other features by using the aggregate-features section of slingfeature-maven-plugin.
